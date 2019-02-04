@@ -138,6 +138,11 @@ Use ls to verify that it downloaded.
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
 
+ent-v314-004:desktop student$ curl -o mtec1002-lab-02.zip http://jvers.com/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  935k  100  935k    0     0  1010k      0 --:--:-- --:--:-- --:--:-- 1010k
+ent-v314-004:desktop student$ 
 
 
 ==========
@@ -146,7 +151,7 @@ Write down the command that you used to download the file below.  Additionally, 
 Write down the command that you used to uncompress the file.
 ----------
 
-
+unzip mtec1002-lab-02
 
 ==========
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
