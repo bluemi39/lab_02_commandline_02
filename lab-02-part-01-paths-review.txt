@@ -31,6 +31,8 @@ cd /Users/rodrigo.vega06/Desktop
 ==========
 4. What's the absolute path to your home directory?
 ----------
+
+
 /Users/rodrigo.vega06
 
 
@@ -49,6 +51,7 @@ cd /Users/rodrigo.vega06/Desktop
 ==========
 7. If you're in your home directory, what's the relative path to your Desktop directory?
 ----------
+
 /Users/rodrigo.vega06/Desktop
 
 ==========
@@ -82,7 +85,7 @@ cd /Users/Guest/desktop/even-more-stuff
 12. If you're in your Desktop directory, how would you change to two directories right above it (again, this should be /Users) using a relative path?  Write your command below.
 ----------
 
-
+cd /Users
 
 ==========
 13. What's the shortcut for changing to the directory that you were just previously in?  For example, if I were in /Volumes... and I changed to /Users/profesor/Desktop, what's a quick way of changing to /Volumes without writing something like cd /Volumes?
