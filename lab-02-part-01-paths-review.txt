@@ -55,24 +55,27 @@ cd /Users/rodrigo.vega06/Desktop
 8. If you're in your home directory, how would you create a new directory on your desktop called stuff without changing your directory?  Write your command below.
 ----------
 
+mkdir -p /Users/Guest/Desktop/stuff
 
 
 ==========
 9. If you're in your root directory, how would you create a new directory on your desktop called more-stuff without changing your directory?  Write your command below.
 ----------
 
-
+mkdir -p /Users/Guest/Desktop/more-stuff
 
 ==========
 10. If you're in your Desktop directory, how would you create a new directory on your desktop called even-more-stuff?  Write your command below.
 ----------
 
-
-
+ mkdir even-more-stuff
+ 
+ 
 ==========
 11. If you're in your home directory, how would you change to the directory right above it using a relative path (it should bring you to /Users)?  Write your command below.
 ----------
 
+cd /Users/Guest/desktop/even-more-stuff
 
 
 ==========
@@ -84,10 +87,15 @@ cd /Users/rodrigo.vega06/Desktop
 ==========
 13. What's the shortcut for changing to the directory that you were just previously in?  For example, if I were in /Volumes... and I changed to /Users/profesor/Desktop, what's a quick way of changing to /Volumes without writing something like cd /Volumes?
 ----------
+<UP> <UP> <ENTER>
+
 
 ==========
 14. How would you show all of the files (including hidden ones) with detailed (long) information that are on you're Desktop if you're in your home directory?  Write your command below.
 ----------
+
+
+cd /Users/Guest/Desktop ; ls -a -l
 
 ==========
 Optional Challenge:
