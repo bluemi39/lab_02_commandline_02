@@ -287,7 +287,7 @@ REMEMBER to use the -o flag and specifiy a filenmae that ends in .tar.gz
 Write out the commands that you used to do this.
 ----------
 
-"webpage does not file to download, it gives me a very long output."
+"webpage does not have a file to download, it gives me a very long output."
 
 ==========
 26. How many files were in the archive.  What were their names?  Write out your answers below.
