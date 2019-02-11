@@ -19,7 +19,7 @@ $ echo hello
 Copy and paste the output below.
 ----------
 
-
+hello
 
 ==========
 2. Type:
@@ -29,7 +29,7 @@ $ echo hello there
 Copy and paste the output below.
 ----------
 
-
+hello there
 
 ==========
 3. Type:
@@ -39,7 +39,7 @@ $ echo good mornin'
 Copy and paste the output below.
 ----------
 
-
+>
 
 ==========
 4. Uh-oh... we're stuck!
@@ -57,8 +57,7 @@ $ echo "good mornin'"
 Copy and paste the output below.
 ----------
 
-
-
+good mornin'
 ==========
 6. There are some other symbols that have special meanings if you don't quote them.  For example, > brings up a different prompt.  Try *.
 
@@ -67,7 +66,7 @@ $ echo *
 What happens?
 ----------
 
-
+Applications Desktop Documents Downloads Library Movies Music Pictures Public
 
 ==========
 7. Ok... that's a lot of output.  How do we clean up our screen so that it's empty again?
@@ -75,7 +74,7 @@ What happens?
 Write the command that you used below:
 ----------
 
-
+clear
 
 ==========
 We're going to practice downloading files from a web site.  We'll use this practice to download more lab materials!
@@ -88,7 +87,12 @@ $ curl google.com
 Copy and paste the output below.
 ----------
 
-
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
 
 ==========
 9. And again.  This time, add www to the URL.
@@ -98,6 +102,7 @@ $ curl www.google.com
 Copy and paste the output below, but not the whole thing!  Just copy up to the part that has the title tags (<title>......</title>).
 ----------
 
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title>
 
 
 ==========
@@ -105,16 +110,20 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 
 Write the command you used below.  Also copy and paste the output below.
 ----------
+curl -o google.html www.google.com
 
-
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 11272    0 11272    0     0  76932      0 --:--:-- --:--:-- --:--:-- 77205
 
 ==========
 11. Now let's download the lab file for this homework.  First, figure out what directory you're in.
 
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
+pwd
 
-
+/Users/Guest
 
 ==========
 12. If you're not in your home directory, change to it (use the shortcut).
@@ -122,7 +131,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
 
-
+cd /Users/Guest
 
 ==========
 13. So... the lab materials are located at this url:
@@ -159,7 +168,9 @@ unzip mtec1002-lab-02
 Copy and paste the output below.
 ----------
 
+ls
 
+books	logs	web
 
 ==========
 We're going to mess around with archiving and compressing files.  We'll make a directory with a file in it... archive and compress it.... and uncompress it elsewhere.
@@ -170,7 +181,9 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 Copy and paste the output below.
 ----------
 
-
+Applications		Downloads		Music			google.html		stuff
+Desktop			Library			Pictures		mtec1002-lab-02
+Documents		Movies			Public			mtec1002-lab-02.zip
 
 ==========
 17. Change into the "stuff" directory that you just created.  Run the following command (we haven't learned this exact command yet, but we will in the next lab!) exactly as described below:
@@ -181,8 +194,11 @@ List the files in the directory you're currently in (which should be stuff).
 
 Copy and paste the output below.
 ----------
+"nothing happens"
 
+" but when you type ls you get this"
 
+hello.txt
 
 ==========
 18. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -194,7 +210,9 @@ List the files in the directory you're currently in (which should be home).
 Copy and paste the output below.
 ----------
 
-
+Applications		Downloads		Music			google.html		stuff
+Desktop			Library			Pictures		mtec1002-lab-02		stuff.tar
+Documents		Movies			Public			mtec1002-lab-02.zip
 
 ==========
 19. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -204,7 +222,8 @@ $ tar -cvf stuff.tar stuff
 Copy and paste the output below.
 ----------
 
-
+a stuff
+a stuff/hello.txt
 
 ==========
 20. List the files in the directory you're currently in (which should be home).  
@@ -212,7 +231,9 @@ Copy and paste the output below.
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
 
-
+Applications		Downloads		Music			google.html		stuff
+Desktop			Library			Pictures		mtec1002-lab-02		stuff.tar
+Documents		Movies			Public			mtec1002-lab-02.zip
 
 ==========
 21. Now compress it!  Type:
@@ -222,7 +243,9 @@ gzip stuff.tar
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
 
-
+Applications		Downloads		Music			google.html		stuff
+Desktop			Library			Pictures		mtec1002-lab-02		stuff.tar.gz
+Documents		Movies			Public			mtec1002-lab-02.zip
 
 ==========
 22. Move stuff.tar.gz into the lab directory that we downloaded.  We didn't learn this command yet, so just type in exactly as is:
@@ -235,7 +258,7 @@ Change your directory to mtec1002-lab-02.
 
 List the files.  Copy and paste the output below (stuff.tar.gz should be there).
 ----------
-
+books		logs		stuff.tar.gz	web
 
 ==========
 23. You should be in the lab directory.  Let's uncompress the file.
@@ -245,7 +268,7 @@ $ tar -xvf stuff.tar.gz
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
 ----------
 
-
+books		logs		stuff		stuff.tar.gz	web
 
 ==========
 24. Go back to your home directory
@@ -264,8 +287,9 @@ REMEMBER to use the -o flag and specifiy a filenmae that ends in .tar.gz
 Write out the commands that you used to do this.
 ----------
 
-
+"webpage does not file to download, it gives me a very long output."
 
 ==========
 26. How many files were in the archive.  What were their names?  Write out your answers below.
 ----------
+"I can't answer this question becuase I was not able to download the file."
